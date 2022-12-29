@@ -1,0 +1,114 @@
+.work__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include size-hw(678px, 100%);
+
+    @media (max-width: 767px) {
+        & {
+            height: 576px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        & {
+            height: 460px;
+        }
+    }
+}
+
+.work__images-block {
+    position: relative;
+    overflow: hidden;
+    @include size-hw(50%, 25%);
+    display: inline-block;
+
+    @media (max-width: 767px) {
+        & {
+            @include size-hw(25%, 50%);
+        }
+    }
+
+    &:hover .text {
+        opacity: 1;
+        background: rgba(255, 67, 67, 0.8);
+        transition: all 0.7s;
+    }
+
+    &:active .text {
+        opacity: 1;
+        background: rgba(185, 12, 12, 0.8);
+        transition: all 0.7s;
+    }
+
+    .image {
+        display: block;
+        @include size-hw(100%, 100%);
+        object-fit: cover;
+        border: 2px solid #FFFFFF;
+    }
+
+    .text {
+        @include size-hw(100%, 100%);
+        display: inline-block;
+        opacity: 0;
+        position: relative;
+        top: -339px;
+        padding-top: 120px;
+
+        @media (max-width: 767px) {
+            & {
+                top: -144px;
+                padding-top: 50px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            & {
+                top: -230px;
+                padding-top: 80px;
+            }
+        }
+
+        h3 {
+            font-family: Raleway;
+            color: #FFFFFF;
+            font-weight: 900;
+            text-align: center;
+            text-transform: uppercase;
+            @include size-p(24px, 28px);
+            @include limit(16px, 36px);
+
+            @media (max-width: 767px) {
+                & {
+                    @include size-p(18px, 21px);
+                    @include limit(2px, 6px);
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                & {
+                    @include size-p(18px, 21px);
+                    @include limit(10px, 22px);
+                }
+            }
+        }
+
+        p {
+            color: #FFFFFF;
+            @include size-p(18px, 21px);
+
+            @media (max-width: 767px) {
+                & {
+                    @include size-p(14px, 16px);
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                & {
+                    @include size-p(14px, 16px);
+                }
+            }
+        }
+    }
+}

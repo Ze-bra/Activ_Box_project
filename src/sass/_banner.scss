@@ -1,0 +1,116 @@
+.banner {
+    background: linear-gradient(hsl(230, 33%, 22%, 0.8), hsl(230, 33%, 22%, 0.8)), url(../img/баннер1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+
+    @media (max-width: 767px) {
+        & {
+            height: max-content;
+        }
+    }
+}
+
+.banner__wrapper-body {
+    @include limit(230px, 120px);
+
+    @media (max-width: 767px) {
+        & {
+            @include limit(106px, 52px);
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        & {
+            @include limit(257px, 126px);
+        }
+    }
+
+    h1 {
+        font-family: Raleway;
+        color: #FFFFFF;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        @include size-p(64px, 75px);
+
+        @media (max-width: 767px) {
+            & {
+                @include size-p(36px, 42px);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            & {
+                @include size-p(48px, 56px);
+            }
+        }
+    }
+
+    p {
+        @include limit(31px, 82px);
+        @include size-p(24px, 28px);
+
+        @media (max-width: 767px) {
+            & {
+                @include limit(33px, 51px);
+                @include size-p(14px, 16px);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            & {
+                @include limit(62px, 92px);
+                @include size-p(18px, 21px);
+            }
+        }
+    }
+
+    form {
+        @extend %form;
+        max-width: 370px;
+
+        @media (max-width: 767px) {
+            & {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            & {
+                max-width: 314px;
+            }
+        }
+
+        &:hover {
+            background: #E71414;
+            transition: all 0.7s;
+        }
+
+        &:active {
+            background: #FF4343;
+            box-shadow: 4px 4px 30px 0px #FF4343;
+            transition: all 0.7s;
+        }
+
+        >button {
+            @extend %button;
+            @include size-p(24px, 28px);
+            @include limit(26px, 26px);
+
+            @media (max-width: 767px) {
+                & {
+                    @include size-p(24px, 28px);
+                    @include limit(16px, 16px);
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                & {
+                    @include size-p(24px, 28px);
+                    @include limit(26px, 26px);
+                }
+            }
+        }
+    }
+}

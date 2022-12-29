@@ -1,0 +1,224 @@
+.footer__top {
+    background-color: #353C65;
+
+    .footer__top-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include limit(70px, 67px);
+
+        @media (max-width: 767px) {
+            & {
+                flex-direction: column;
+                @include limit(34px, 33px);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            & {
+
+                @include limit(47px, 41px);
+            }
+        }
+
+        .location {
+            width: 32%;
+
+            @media (max-width: 767px) {
+                & {
+                    width: 100%;
+                }
+            }
+
+            h3 {
+                font-family: Raleway;
+                color: #FFFFFF;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                @include size-p(18px, 21px);
+                @include limit(0, 29px);
+
+                @media (max-width: 767px) {
+                    & {
+                        @include size-p(14px, 16px);
+                        @include limit(0, 34px);
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    & {
+                        @include size-p(14px, 16px);
+                        @include limit(0, 17px);
+                    }
+                }
+            }
+
+            p {
+                color: #FFFFFF;
+                @include size-p(18px, 21px);
+
+                @media (max-width: 767px) {
+                    & {
+                        @include size-p(14px, 16px);
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    & {
+                        @include size-p(14px, 16px);
+                    }
+                }
+            }
+        }
+
+        .social {
+            width: 32%;
+
+            @media (max-width: 767px) {
+                & {
+                    width: 100%;
+                    @include limit(69px, 59px)
+                }
+            }
+
+            h3 {
+                font-family: Raleway;
+                color: #FFFFFF;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                @include size-p(18px, 21px);
+                @include limit(0, 49px);
+
+                @media (max-width: 767px) {
+                    & {
+                        @include size-p(14px, 16px);
+                        @include limit(0, 37px);
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    & {
+                        @include size-p(14px, 16px);
+                        @include limit(0, 41px);
+                    }
+                }
+            }
+
+            .social__icons {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                img {
+                    border: 1px solid #C6CBCD;
+                    @include size-img(40px, 40px);
+                    @include limit(8px, 8px);
+                    @include limit-lr(8px, 8px);
+                    margin: 0 13px 0 13px;
+
+                    @media (max-width: 767px) {
+                        & {
+                            @include size-img(32px, 32px);
+                            @include limit(6px, 6px);
+                            @include limit-lr(6px, 6px);
+                            margin: 0 8px 0 8px;
+                        }
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1024px) {
+                        & {
+                            @include size-img(32px, 32px);
+                            @include limit(6px, 6px);
+                            @include limit-lr(6px, 6px);
+                            margin: 0 11px 0 11px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about {
+            width: 32%;
+
+            @media (max-width: 767px) {
+                & {
+                    width: 100%;
+                }
+            }
+
+            h3 {
+                font-family: Raleway;
+                color: #FFFFFF;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                @include size-p(18px, 21px);
+                @include limit(0, 29px);
+
+                @media (max-width: 767px) {
+                    & {
+                        @include size-p(14px, 16px);
+                        @include limit(0, 39px);
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    & {
+                        @include size-p(14px, 16px);
+                        @include limit(0, 17px);
+                    }
+                }
+            }
+
+            p {
+                color: #FFFFFF;
+                @include size-p(18px, 21px);
+
+                @media (max-width: 767px) {
+                    & {
+                        @include size-p(14px, 16px);
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    & {
+                        @include size-p(14px, 16px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer__bottom {
+    background-color: #2C3154;
+
+    .footer__bottom-wrapper {
+
+        p {
+            color: #808080;
+            @include size-p(18px, 21px);
+            @include limit(24px, 24px);
+
+            @media (max-width: 767px) {
+                & {
+                    @include size-p(14px, 16px);
+                    @include limit(30px, 28px);
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                & {
+                    @include size-p(14px, 16px);
+                    @include limit(14px, 14px);
+                }
+            }
+
+            span {
+                color: #FFFFFF;
+            }
+        }
+    }
+}

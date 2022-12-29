@@ -1,0 +1,182 @@
+.testimonials__slides {
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+        & {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+
+    .testimonials__slides-holder {
+        display: flex;
+        flex-direction: row;
+        width: 500%;
+        position: relative;
+        transition-duration: 1s;
+    }
+}
+
+input {
+    display: none;
+}
+
+.holder__item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    @media (max-width: 767px) {
+        & {
+            flex-direction: column;
+        }
+    }
+
+    img {
+        height: 490px;
+        width: 50%;
+        object-fit: cover;
+        object-position: center;
+
+        @media (max-width: 767px) {
+            & {
+                height: 212px;
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            & {
+                height: 332px;
+            }
+        }
+    }
+
+    .review {
+        background-color: #5C3249;
+        height: 490px;
+        width: 50%;
+
+        @media (max-width: 767px) {
+            & {
+                height: 326px;
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            & {
+                height: 332px;
+            }
+        }
+
+        .review__content {
+            width: 62%;
+            padding-top: 116px;
+            margin: 0 auto;
+
+            @media (max-width: 767px) {
+                & {
+                    padding-top: 0;
+                    width: 86%;
+                    text-align: center;
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                & {
+                    padding-top: 47px;
+                }
+            }
+
+            cite {
+                display: inline-block;
+                font-family: Cardo;
+                font-weight: 400;
+                color: #FFFFFF;
+                @include size-p(36px, 48px);
+                @include limit(19px, 19px);
+
+                @media (max-width: 767px) {
+                    & {
+                        @include size-p(24px, 32px);
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    & {
+                        @include size-p(24px, 32px);
+                    }
+                }
+            }
+
+            p {
+                @include size-p(13px, 15px);
+                margin-top: 13px;
+                color: #FFFFFF;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: left;
+
+                @media (max-width: 767px) {
+                    & {
+                        @include size-p(12px, 14px);
+                        margin-top: 5px;
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    & {
+                        @include size-p(12px, 14px);
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slides__controls {
+    display: block;
+    left: 50%;
+    margin-left: -98px;
+    position: absolute;
+
+    .dot {
+        display: inline-block;
+        margin: 31px 13px 0 13px;
+        width: 14px;
+        aspect-ratio: 1/1;
+        border: 1px solid #7E5D6F;
+        border-radius: 50%;
+    }
+}
+
+#slide1:checked~.slides__controls>.dot1,
+#slide2:checked~.slides__controls>.dot2,
+#slide3:checked~.slides__controls>.dot3,
+#slide4:checked~.slides__controls>.dot4,
+#slide5:checked~.slides__controls>.dot5 {
+    background-color: #7E5D6F;
+}
+
+#slide1:checked~.testimonials__slides-holder {
+    left: 0;
+}
+
+#slide2:checked~.testimonials__slides-holder {
+    left: -100%;
+}
+
+#slide3:checked~.testimonials__slides-holder {
+    left: -200%;
+}
+
+#slide4:checked~.testimonials__slides-holder {
+    left: -300%;
+}
+
+#slide5:checked~.testimonials__slides-holder {
+    left: -400%;
+}

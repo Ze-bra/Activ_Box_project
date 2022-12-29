@@ -1,0 +1,49 @@
+//-------отступ контента в теле блока--------
+@mixin limit($pt, $pb) {
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
+@mixin limit-lr($pl, $pr) {
+    padding-left: $pl;
+    padding-right: $pr;
+}
+
+//---------высота текста-----------
+@mixin size-p($s, $lh) {
+    font-size: $s;
+    line-height: $lh;
+}
+
+//----------- размер объекта-------------
+@mixin size-hw($h, $w) {
+    height: $h;
+    width: $w;
+}
+
+//@include
+
+//----------кнопка----------------
+%form {
+    width: 100%;
+    background-color: #FF4343;
+    margin: 0 auto;
+    text-align: center;
+}
+
+%button {
+    font-family: Raleway;
+    font-weight: 900;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: none;
+    text-transform: uppercase;
+}
+
+//@extend %
+
+//-------------размер картинки----------
+@mixin size-img($iw, $ih) {
+    width: $iw;
+    height: $ih;
+}

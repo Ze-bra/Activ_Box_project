@@ -1,0 +1,19 @@
+{
+  "name": "activ_box",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "parcel src/index.html --open",
+    "build": "npm run clean && parcel build ./src/index.html --public-url ./ --no-source-maps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2",
+    "rimraf": "^3.0.2",
+    "sass": "^1.57.1"
+  }
+}

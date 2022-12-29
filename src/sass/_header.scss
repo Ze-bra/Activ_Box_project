@@ -1,0 +1,255 @@
+.header {
+    display: flex;
+    position: fixed;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    z-index: 100;
+
+    @media (max-width: 767px) {
+        & {
+            height: 56px;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 54px;
+                display: block;
+                border: 1px solid #662b2b;
+                @include size-hw(0px, 100%);
+            }
+        }
+    }
+
+    .header__wrapper {
+        width: 100%;
+        position: relative;
+
+        .header__wrapper-cont {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 62px;
+                display: block;
+                border: 1px solid #BABBC5;
+                @include size-hw(0px, 100%);
+
+                @media (max-width: 767px) {
+                    & {
+                        display: none;
+                    }
+                }
+            }
+
+            .header-logo {
+                display: flex;
+                flex-direction: row;
+                z-index: 10;
+
+                img {
+                    height: 26px;
+                    width: auto;
+
+                    @media (max-width: 767px) {
+                        & {
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+
+            .header-navigation {
+                position: relative;
+                width: 55%;
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    & {
+                        width: 65%;
+                    }
+                }
+
+                #header-navigation__switch {
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+
+                    &:checked~.menu__btn>span {
+                        transform: rotate(45deg);
+                    }
+
+                    &:checked~.menu__btn>span::before {
+                        top: 0;
+                        transform: rotate(0);
+                    }
+
+                    &:checked~.menu__btn>span::after {
+                        top: 0;
+                        transform: rotate(90deg);
+                    }
+
+                    &:checked~.navigation__list {
+                        visibility: visible;
+                        left: 0;
+                    }
+                }
+
+                .menu__btn {
+                    display: none;
+
+                    @media (max-width: 767px) {
+                        & {
+                            display: flex;
+                            align-items: center;
+                            position: fixed;
+                            @include size-hw(18px, 24px);
+                            top: 18px;
+                            right: 35px;
+                            z-index: 10;
+                        }
+                    }
+
+                    span,
+                    span::before,
+                    span::after {
+                        display: block;
+                        position: absolute;
+                        @include size-hw(2px, 100%);
+                        background-color: #FFFFFF;
+                        transition-duration: .25s;
+                    }
+
+                    span::before {
+                        content: "";
+                        top: -8px;
+                    }
+
+                    span::after {
+                        content: "";
+                        top: 8px;
+                    }
+                }
+
+                .navigation__list {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+
+                    @media (max-width: 767px) {
+                        & {
+                            position: fixed;
+                            visibility: hidden;
+                            flex-direction: column;
+                            top: 0;
+                            left: 0;
+                            @include size-hw(574px, 100%);
+                            margin: 0;
+                            padding: 56px 0 0 0;
+                            text-align: center;
+                            transition-duration: .25s;
+                            background: linear-gradient(hsl(230, 33%, 22%, 0.8), hsl(230, 33%, 22%, 0.8)), url(../img/баннер1.png);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position-x: center;
+                        }
+                    }
+
+                    li {
+                        display: inline-block;
+                        width: 134px;
+                        text-align: center;
+                        position: relative;
+
+                        @media (max-width: 767px) {
+                            & {
+                                width: 100%;
+                                text-align: left;
+                                @include limit(24px, 24px);
+                                @include limit-lr(20px, 20px);
+                            }
+                        }
+
+                        @media (min-width: 768px) and (max-width: 1024px) {
+                            & {
+                                width: 112px;
+                            }
+                        }
+
+                        &:hover {
+                            &::after {
+                                content: "";
+                                display: inline-block;
+                                position: absolute;
+                                top: 55px;
+                                display: block;
+                                background-color: #BABBC5;
+                                @include size-img(134px, 3px);
+                                transition: all 0.7s;
+
+                                @media (max-width: 767px) {
+                                    & {
+                                        display: none;
+                                    }
+                                }
+
+                                @media (min-width: 768px) and (max-width: 1024px) {
+                                    & {
+                                        width: 112px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:active {
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 55px;
+                                display: block;
+                                background-color: #E71414;
+                                @include size-img(134px, 3px);
+                                transition: all 0.7s;
+
+                                @media (max-width: 767px) {
+                                    & {
+                                        display: none;
+                                    }
+                                }
+
+                                @media (min-width: 768px) and (max-width: 1024px) {
+                                    & {
+                                        width: 112px;
+                                    }
+                                }
+                            }
+                        }
+
+                        a {
+                            font-family: Raleway;
+                            font-weight: 700;
+                            color: #FFFFFF;
+                            @include size-p(13px, 15px);
+                            text-transform: uppercase;
+                            transition-duration: .25s;
+
+                            @media (min-width: 768px) and (max-width: 1024px) {
+                                & {
+                                    @include size-p(12px, 14px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

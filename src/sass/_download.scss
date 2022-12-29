@@ -1,0 +1,108 @@
+.download__wrapper {
+    @include limit(159px, 114px);
+
+    @media (max-width: 767px) {
+        & {
+            @include limit(67px, 45px);
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        & {
+            @include limit(110px, 78px);
+        }
+    }
+
+    h3 {
+        font-family: Raleway;
+        color: #000000;
+        font-weight: 500;
+        text-align: center;
+        @include size-p(30px, 35px);
+        @include limit(17px, 17px);
+
+        @media (max-width: 767px) {
+            & {
+                @include size-p(18px, 21px);
+                @include limit(19px, 19px);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            & {
+                @include size-p(24px, 28px);
+                @include limit(16px, 16px);
+            }
+        }
+    }
+
+    p {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000000;
+        @include limit(5px, 50px);
+        @include size-p(18px, 21px);
+
+        @media (max-width: 767px) {
+            & {
+                @include limit(3px, 13px);
+                @include size-p(13px, 15px);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            & {
+                @include limit(5px, 46px);
+                @include size-p(14px, 16px);
+            }
+        }
+    }
+
+    form {
+        @extend %form;
+        max-width: 370px;
+
+        @media (max-width: 767px) {
+            & {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            & {
+                max-width: 314px;
+            }
+        }
+
+        &:hover {
+            background: #E71414;
+            transition: all 0.7s;
+        }
+
+        &:active {
+            background: #FF4343;
+            box-shadow: 4px 4px 30px 0px #FF4343;
+            transition: all 0.7s;
+        }
+
+        >button {
+            @extend %button;
+            @include size-p(24px, 28px);
+            @include limit(26px, 26px);
+
+            @media (max-width: 767px) {
+                & {
+                    @include size-p(18px, 21px);
+                    @include limit(29px, 29px);
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                & {
+                    @include size-p(18px, 21px);
+                    @include limit(29px, 29px);
+                }
+            }
+        }
+    }
+}
